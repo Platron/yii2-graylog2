@@ -1,15 +1,15 @@
 {
-    "name": "nex/yii2-graylog2",
+    "name": "payprocessing/yii2-graylog2",
     "type": "yii2-extension",
-    "description": "Graylog2 log target for Yii2",
+    "description": "Graylog2 log TCP target for Yii2",
     "keywords": ["yii2", "extension", "log", "log target", "graylog", "graylog2", "gelf"],
-    "homepage": "https://github.com/RomeroMsk/yii2-graylog2",
+    "homepage": "https://github.com/Platron",
     "license": "BSD 3-Clause",
     "authors": [
         {
-            "name": "Roman Ovchinnikov",
-            "email": "nex.software@gmail.com",
-            "homepage": "https://github.com/RomeroMsk"
+            "name": "Platron",
+            "email": "it@platron.ru",
+            "homepage": "https://github.com/Platron"
         }
     ],
     "require": {
