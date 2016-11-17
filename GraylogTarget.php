@@ -31,6 +31,11 @@ class GraylogTarget extends Target
      * @var integer Graylog2 port
      */
     public $port = 12201;
+    
+    /**
+     * @var integer TCP connection timeout
+     */
+    public $timeout = 3;
 
     /**
      * @var string default facility name
@@ -59,7 +64,9 @@ class GraylogTarget extends Target
      */
     public function export()
     {
-        $transport = new Gelf\Transport\UdpTransport($this->host, $this->port, Gelf\Transport\UdpTransport::CHUNK_SIZE_LAN);
+        $transport = new Gelf\Transport\TcpTransport($this->host, $this->port);
+        $transport->setConnectTimeout($this->timeout);
+        
         $publisher = new Gelf\Publisher($transport);
         foreach ($this->messages as $message) {
             list($text, $level, $category, $timestamp) = $message;
